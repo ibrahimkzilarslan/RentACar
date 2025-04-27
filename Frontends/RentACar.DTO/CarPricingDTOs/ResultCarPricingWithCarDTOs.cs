@@ -8,6 +8,7 @@ namespace RentACar.DTO.CarPricingDTOs
 {
     public class ResultCarPricingWithCarDTOs
     {
+        public int CarID { get; set; }
         public int CarPricingID { get; set; }
 
         public string Brand { get; set; }
