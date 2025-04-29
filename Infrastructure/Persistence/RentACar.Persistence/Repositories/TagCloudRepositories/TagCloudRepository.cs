@@ -13,6 +13,12 @@ namespace RentACar.Persistence.Repositories.TagCloudRepositories
     {
 
         private readonly RentACarContext _context;
+
+        public TagCloudRepository(RentACarContext context)
+        {
+            _context = context;
+        }
+
         public List<TagCloud> GetTagCloudByBlogId(int id)
         {
             var values = _context.TagClouds.Where(x => x.BlogID == id).ToList();
