@@ -28,7 +28,8 @@ namespace RentACar.Application.Features.Mediator.Handlers.BlogHandler
                 CategoryID = request.CategoryID,
                 CoverImageUrl = request.CoverImageUrl,
                 CreatedDate = request.CreatedDate,
-                Title = request.Title
+                Title = request.Title,
+
             });
         }
     }
