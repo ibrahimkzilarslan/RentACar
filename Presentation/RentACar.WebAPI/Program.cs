@@ -19,6 +19,8 @@ using RentACar.Application.Features.CQRS.Handlers.CarHandlers;
 using RentACar.Application.Features.CQRS.Handlers.CategoryHandlers;
 using RentACar.Application.Features.CQRS.Handlers.ContactHandlers;
 using RentACar.Application.Services;
+using RentACar.Application.Interfaces.StatisticsInterfaces;
+using RentACar.Persistence.Repositories.StatisticsRepositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,7 +32,7 @@ builder.Services.AddScoped(typeof(IBlogRepository), typeof(BlogRepository));
 builder.Services.AddScoped(typeof(ICarPricingRepository), typeof(CarPricingRepository));
 builder.Services.AddScoped(typeof(ITagCloudRepository), typeof(TagCloudRepository));
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(CommentRepository<>));
-
+builder.Services.AddScoped(typeof(IStatisticsRepository), typeof(StatisticsRepository));
 
 
 
