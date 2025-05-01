@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RentACar.Application.Features.CQRS.Commands.CarCommands;
 using RentACar.Application.Features.CQRS.Handlers.CarHandlers;
 using RentACar.Application.Features.CQRS.Queries.CarQueries;
+using RentACar.Application.Features.Mediator.Queries.StatisticsQueries;
 
 namespace RentACar.WebAPI.Controllers
 {
