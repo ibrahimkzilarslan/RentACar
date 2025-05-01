@@ -4,6 +4,7 @@ using RentACar.Application.Features.Mediator.Results.FooterAddressResults;
 using RentACar.Application.Features.Mediator.Results.StatisticsResults;
 using RentACar.Application.Interfaces;
 using RentACar.Application.Interfaces.CarInterfaces;
+using RentACar.Application.Interfaces.StatisticsInterfaces;
 using RentACar.Domain.Entitites;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,9 @@ namespace RentACar.Application.Features.Mediator.Handlers.StatisticsHandler
     public class GetCarCountQueryHandler : IRequestHandler<GetCarCountQuery, GetCarCountQueryResults>
     {
 
-        private readonly ICarRepository _repository;
+        private readonly IStatisticsRepository _repository;
 
-        public GetCarCountQueryHandler(ICarRepository repository)
+        public GetCarCountQueryHandler(IStatisticsRepository repository)
         {
             _repository = repository;
         }
