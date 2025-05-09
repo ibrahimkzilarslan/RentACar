@@ -1,7 +1,6 @@
 ﻿using MediatR;
 using RentACar.Application.Features.Mediator.Commands.FeatureCommands;
 using RentACar.Application.Interfaces;
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,16 +12,16 @@ namespace RentACar.Application.Features.Mediator.Handlers.FeatureHandlers
     public class CreateFeatureCommandHandler : IRequestHandler<CreateFeatureCommand>
     {
 
-        private readonly IRepository<Domain.Entitites.Features> _repository;
+        private readonly IRepository<Domain.Entities.Features> _repository;
 
-        public CreateFeatureCommandHandler(IRepository<Domain.Entitites.Features> repository)
+        public CreateFeatureCommandHandler(IRepository<Domain.Entities.Features> repository)
         {
             _repository = repository;
         }
 
         public async Task Handle(CreateFeatureCommand request, CancellationToken cancellationToken)
         {
-            await _repository.CreateAsync(new Domain.Entitites.Features
+            await _repository.CreateAsync(new Domain.Entities.Features
             {
                Name = request.Name,
             });

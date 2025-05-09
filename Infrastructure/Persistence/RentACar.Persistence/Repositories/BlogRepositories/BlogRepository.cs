@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RentACar.Application.Interfaces.BlogInterfaces;
-using RentACar.Domain.Entitites;
+using RentACar.Domain.Entities;
 using RentACar.Persistence.Context;
 using System;
 using System.Collections.Generic;

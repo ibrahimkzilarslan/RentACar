@@ -5,7 +5,6 @@ using RentACar.Application.Features.Mediator.Results.StatisticsResults;
 using RentACar.Application.Interfaces;
 using RentACar.Application.Interfaces.CarInterfaces;
 using RentACar.Application.Interfaces.StatisticsInterfaces;
-using RentACar.Domain.Entitites;
 using System;
 using System.Collections.Generic;
 using System.Linq;

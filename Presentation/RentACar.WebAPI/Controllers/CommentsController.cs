@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RentACar.Application.Features.Mediator.Commands.CommentCommands;
+using RentACar.Application.Features.Mediator.Commands.ReservationCommands;
 using RentACar.Application.Features.RepositoryPattern;
 using RentACar.Domain.Entities;
 
@@ -10,10 +13,12 @@ namespace RentACar.WebAPI.Controllers
     public class CommentsController : ControllerBase
     {
         private readonly IGenericRepository<Comment> _repository;
+        private readonly IMediator _mediator;
 
-        public CommentsController(IGenericRepository<Comment> repository)
+        public CommentsController(IGenericRepository<Comment> repository, IMediator mediator)
         {
             _repository = repository;
+            _mediator = mediator;
         }
 
         [HttpGet]
@@ -64,6 +69,21 @@ namespace RentACar.WebAPI.Controllers
         {
             var values = _repository.GetCommentByBlogId(id);
             return Ok(values);
+        }
+        [HttpGet("CommentCountByBlog")]
+
+        public IActionResult CommentCountByBlog(int id)
+        {
+            var values = _repository.GetCountCommentByBlog(id);
+            return Ok(values);
+        }
+
+        [HttpPost("CreateCommentWithMediator")]
+
+        public async Task<IActionResult> CreateCommentWithMediator(CreateCommentCommand command)
+        {
+            await _mediator.Send(command);
+            return Ok("Yorum eklendi");
         }
     }
 }

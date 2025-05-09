@@ -3,7 +3,7 @@ using RentACar.Application.Features.Mediator.Queries.FooterAddressQueries;
 using RentACar.Application.Features.Mediator.Results.FeatureResults;
 using RentACar.Application.Features.Mediator.Results.FooterAddressResults;
 using RentACar.Application.Interfaces;
-using RentACar.Domain.Entitites;
+using RentACar.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

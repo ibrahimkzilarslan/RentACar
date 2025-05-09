@@ -14,9 +14,9 @@ namespace RentACar.Application.Features.Mediator.Handlers.FeatureHandlers
 {
     public class GetFeatureByIdQueryHandler : IRequestHandler<GetFeatureByIdQuery, GetFeatureByIdQueryResults>
     {
-        private readonly IRepository<Domain.Entitites.Features> _repository;
+        private readonly IRepository<Domain.Entities.Features> _repository;
 
-        public GetFeatureByIdQueryHandler(IRepository<Domain.Entitites.Features> repository)
+        public GetFeatureByIdQueryHandler(IRepository<Domain.Entities.Features> repository)
         {
             _repository = repository;
         }

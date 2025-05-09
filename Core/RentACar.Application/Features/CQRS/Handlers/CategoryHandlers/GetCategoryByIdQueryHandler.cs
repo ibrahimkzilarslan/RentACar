@@ -1,7 +1,7 @@
 ﻿using RentACar.Application.Features.CQRS.Queries.CategoryQueries;
 using RentACar.Application.Features.CQRS.Results.CategoryResults;
 using RentACar.Application.Interfaces;
-using RentACar.Domain.Entitites;
+using RentACar.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

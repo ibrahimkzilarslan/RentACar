@@ -1,5 +1,5 @@
 ﻿using RentACar.Application.Features.RepositoryPattern;
-using RentACar.Domain.Entitites;
+using RentACar.Domain.Entities;
 using RentACar.Persistence.Context;
 using System;
 using System.Collections.Generic;
@@ -59,6 +59,12 @@ namespace RentACar.Persistence.Repositories.CommentRepositories
         {
             _context.Comments.Update(entity);
             _context.SaveChanges();
+        }
+
+        public int GetCountCommentByBlog(int id)
+        {
+            var count = _context.Comments.Where(x => x.BlogID == id).Count();
+            return count;
         }
     }
 }

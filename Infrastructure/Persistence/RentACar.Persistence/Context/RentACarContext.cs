@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RentACar.Domain.Entitites;
+using RentACar.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,5 +38,21 @@ namespace RentACar.Persistence.Context
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<TagCloud> TagClouds { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<RentCar> RentCars { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Reservation>().HasOne(r => r.PickUpLocation)
+                .WithMany(l => l.PickUpReservation)
+                .HasForeignKey(r => r.PickUpLocationID)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<Reservation>().HasOne(r => r.DropOffLocation)
+                .WithMany(l => l.DropOffReservation)
+                .HasForeignKey(r => r.DropOffLocationID)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+        }
     }
 }

@@ -30,6 +30,7 @@ namespace RentACar.Application.Features.Mediator.Handlers.CarPricingHandler
                 CarPricingID = x.CarPricingID,
                 CoverImageUrl = x.Car.CoverImageUrl,
                 Model = x.Car.Model,
+                CarID = x.CarID
             }).ToList();
         }
 

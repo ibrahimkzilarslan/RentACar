@@ -3,7 +3,7 @@ using RentACar.Application.Features.Mediator.Queries.PricingQueries;
 using RentACar.Application.Features.Mediator.Results.LocationResults;
 using RentACar.Application.Features.Mediator.Results.PricingResults;
 using RentACar.Application.Interfaces;
-using RentACar.Domain.Entitites;
+using RentACar.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

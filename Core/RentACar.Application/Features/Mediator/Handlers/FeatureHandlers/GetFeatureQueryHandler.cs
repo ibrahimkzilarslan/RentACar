@@ -13,9 +13,9 @@ namespace RentACar.Application.Features.Mediator.Handlers.FeatureHandlers
     public class GetFeatureQueryHandler : IRequestHandler<GetFeatureQuery /* İstek buradan yapılacak*/ , /*Yanıt buradan list olarak dönecek */ List<GetFeatureQueryResults>>
     {
 
-        private readonly IRepository<Domain.Entitites.Features> _repository;
+        private readonly IRepository<Domain.Entities.Features> _repository;
 
-        public GetFeatureQueryHandler(IRepository<Domain.Entitites.Features> repository)
+        public GetFeatureQueryHandler(IRepository<Domain.Entities.Features> repository)
         {
             _repository = repository;
         }

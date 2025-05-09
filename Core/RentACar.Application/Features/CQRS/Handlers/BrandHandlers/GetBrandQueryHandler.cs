@@ -1,6 +1,6 @@
 ﻿using RentACar.Application.Features.CQRS.Results.BrandResults;
 using RentACar.Application.Interfaces;
-using RentACar.Domain.Entitites;
+using RentACar.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

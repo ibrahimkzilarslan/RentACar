@@ -1,7 +1,7 @@
 ﻿using RentACar.Application.Features.CQRS.Queries.CarQueries;
 using RentACar.Application.Features.CQRS.Results.CarResults;
 using RentACar.Application.Interfaces;
-using RentACar.Domain.Entitites;
+using RentACar.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +34,7 @@ namespace RentACar.Application.Features.CQRS.Handlers.CarHandlers
                 Model = values.Model,
                 Km = values.Km,
                 Luggage = values.Luggage,
+                
             };
         }
     }

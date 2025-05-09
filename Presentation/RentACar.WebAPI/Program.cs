@@ -23,8 +23,20 @@ using RentACar.Application.Interfaces.StatisticsInterfaces;
 using RentACar.Persistence.Repositories.StatisticsRepositories;
 using RentACar.Application.Interfaces.RentCarInterfaces;
 using RentACar.Persistence.Repositories.RentCarRepositories;
+using RentACar.Application.Interfaces.CarFeatureInterfaces;
+using RentACar.Persistence.Repositories.CarFeatureRepositories;
+using RentACar.Application.Interfaces.CarDescriptionInterfaces;
+using RentACar.Persistence.Repositories.CarDescriptionRepositories;
+using RentACar.Application.Interfaces.ReviewInterfaces;
+using RentACar.Persistence.Repositories.ReviewRepository;
+using FluentValidation.AspNetCore;
+using System.Reflection;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Context ve Repository Sýnýflarý
 builder.Services.AddScoped<RentACarContext>();
@@ -36,6 +48,9 @@ builder.Services.AddScoped(typeof(ITagCloudRepository), typeof(TagCloudRepositor
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(CommentRepository<>));
 builder.Services.AddScoped(typeof(IStatisticsRepository), typeof(StatisticsRepository));
 builder.Services.AddScoped(typeof(IRentCarRepository), typeof(RentCarRepository));
+builder.Services.AddScoped(typeof(ICarFeatureRepository), typeof(CarFeatureRepository));
+builder.Services.AddScoped(typeof(ICarDescriptionRepository), typeof(CarDescriptionRepository));
+builder.Services.AddScoped(typeof(IReviewRepository), typeof(ReviewRepository));
 
 
 
@@ -94,7 +109,13 @@ builder.Services.AddDbContext<RentACarContext>(options =>
 
 
 
-builder.Services.AddControllers();
+
+builder.Services.AddControllers().AddFluentValidation(x =>
+{
+    x.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+});
+
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -109,6 +130,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

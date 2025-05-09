@@ -2,7 +2,7 @@
 using RentACar.Application.Features.CQRS.Commands.AboutCommands;
 using RentACar.Application.Features.Mediator.Commands.BlogCommands;
 using RentACar.Application.Interfaces;
-using RentACar.Domain.Entitites;
+using RentACar.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

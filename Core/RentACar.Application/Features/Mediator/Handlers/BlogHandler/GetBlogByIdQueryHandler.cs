@@ -3,7 +3,7 @@ using RentACar.Application.Features.Mediator.Queries.BlogQueries;
 using RentACar.Application.Features.Mediator.Results.AuthorResults;
 using RentACar.Application.Features.Mediator.Results.BlogResults;
 using RentACar.Application.Interfaces;
-using RentACar.Domain.Entitites;
+using RentACar.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

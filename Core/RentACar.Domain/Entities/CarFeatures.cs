@@ -10,7 +10,6 @@ namespace RentACar.Domain.Entities
     {
         public int CarFeaturesID { get; set; }
         public int CarID { get; set; }
-
         public Car Car { get; set; }
         public int FeaturesID { get; set; }
         public Features Features { get; set; }
