@@ -8,7 +8,7 @@ namespace RentACar.DTO.RentCarDTOs
 {
     public class FilterRentCarDTO
     {
-        public int carID { get; set; }
+        public int CarID { get; set; }
 
         public string Brand { get; set; }
 
@@ -16,6 +16,5 @@ namespace RentACar.DTO.RentCarDTOs
 
         public string CoverImageUrl { get; set; }
 
-        public decimal Amount { get; set; }
     }
 }
