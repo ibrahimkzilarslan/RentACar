@@ -14,6 +14,5 @@ namespace RentACar.Domain.Entities
         public List<Reservation> PickUpReservation { get; set; }
         public List<Reservation> DropOffReservation { get; set; }
 
-
     }
 }

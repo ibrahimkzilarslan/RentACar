@@ -12,5 +12,12 @@ namespace RentACar.Application.Features.Mediator.Queries.RentCarQueries
     {
         public int LocationID { get; set; }
         public bool Available { get; set; }
+
+
+
+
+
+
+
     }
 }

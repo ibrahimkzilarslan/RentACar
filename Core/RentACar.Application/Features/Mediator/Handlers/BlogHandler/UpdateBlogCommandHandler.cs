@@ -23,7 +23,6 @@ namespace RentACar.Application.Features.Mediator.Handlers.BlogHandler
         {
             var values = await _repository.GetByIdAsync(request.BlogID);
             values.AuthorID = request.AuthorID;
-            values.CategoryID = request.CategoryID;
             values.CoverImageUrl = request.CoverImageUrl;
             values.CreatedDate = request.CreatedDate;
             values.Title = request.Title;

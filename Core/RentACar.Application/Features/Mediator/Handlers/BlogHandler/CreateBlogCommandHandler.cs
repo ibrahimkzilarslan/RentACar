@@ -25,7 +25,6 @@ namespace RentACar.Application.Features.Mediator.Handlers.BlogHandler
             await _repository.CreateAsync(new Blog
             {
                 AuthorID = request.AuthorID,
-                CategoryID = request.CategoryID,
                 CoverImageUrl = request.CoverImageUrl,
                 CreatedDate = request.CreatedDate,
                 Title = request.Title,

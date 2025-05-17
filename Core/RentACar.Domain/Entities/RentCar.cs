@@ -15,7 +15,5 @@ namespace RentACar.Domain.Entities
         public Car Car { get; set; }
         public bool Available { get; set; }
 
-       //public decimal Amount { get; set; }
-
     }
 }

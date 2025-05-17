@@ -32,7 +32,6 @@ namespace RentACar.Application.Features.Mediator.Handlers.BlogHandler
             {
                 BlogID = values.BlogID,
                 AuthorID = values.AuthorID,
-                CategoryID = values.CategoryID,
                 CoverImageUrl = values.CoverImageUrl,
                 CreatedDate = values.CreatedDate,
                 Description = values.Description,

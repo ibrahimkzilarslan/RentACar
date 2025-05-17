@@ -30,7 +30,7 @@ namespace RentACar.Application.Features.Mediator.Handlers.RentCarHandler
             var results =  values.Select(x => new GetRentCarQueryResults
             {
                 CarID = x.CarID,
-                Brand = x.Car.Brand.Name,              
+                Brand = x.Car.Brand.Name, 
                 Model = x.Car.Model,
                 CoverImageUrl = x.Car.CoverImageUrl,
             }).ToList();
