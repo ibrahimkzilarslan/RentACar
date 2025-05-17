@@ -30,7 +30,7 @@
      - API: https://localhost:port/swagger
      - Frontend: https://localhost:port
        
- ![Anasayfa Görseli](screenshots/arayuzfoto.png)
+ ![Anasayfa Görseli](screenshots/arayüzfoto.png)
 
 
 
