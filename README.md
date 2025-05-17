@@ -1,17 +1,36 @@
-# Car Rental Automation with ASP.NET Core API 8.0 Onion Architecture
+# **ASP.NET Core Web API 8.0 Onion Mimarisi ile Araç Kiralama Otomasyonu**
 
-This project is a scalable and sustainable web application developed using **ASP.NET Core 8.0**. The project is structured in line with modern software development principles. Developed with a layered architecture approach, this system is compatible with SOLID principles and has an easy-to-test structure.
+# Proje Özeti
+- Amaç: Araç kiralama süreçlerini dijitalleştirerek verimliliği artırmak, kullanıcı deneyimini iyileştirmek ve operasyonel yönetimi kolaylaştırmak.
+- Teknolojiler: ASP.NET Core Web API, Entity Framework Core, JWT, FluentValidation, Onion Architecture, HTML/CSS/JavaScript, Razor, Bootstrap, Swagger.
+- Özellikler: Kullanıcılar için araç arama, rezervasyon ve ödeme; yöneticiler için araç, müşteri ve rezervasyon yönetimi.
 
-## 🚀 Technologies and Structers Used
+# 🚀 Geliştirme Ortamı
 
-- **ASP.NET Core 8.0** : Modern .NET platform for developing high-performance, modular, and cloud-friendly web applications.
-- **Onion Architecture** : It provides a loosely coupled and testable structure by abstracting the core of the application from the outer layers.
-- **CQRS (Command and Query Responsibility Segregation)** : It provides a more scalable structure by separating data reading and writing operations.
-- **MediatR (Mediator Pattern)** : A behavioral design pattern that enables loose coupling between layers and decouples responsibilities.
-- **Repository Pattern** : By abstracting data access, it enables the business layer to operate independently of the data source.
-- **JWT (Json Web Token)** : Secure token-based system for user authentication and authorization.
-- **SignalR** : It provides dynamic user experience by providing true two-way communication (e.g. packages system, live tables, etc.).
-- **Pivot Table** : Dynamic tabular structure that facilitates summarization and analysis of data.
-- **FluentValidation** : It is used to define strong and readable validation rules at the object level.
-- **DTO (Data Transfer Object)** : Simple and secure data models used to move data between layers.
+- Backend: .NET Core 8.0, C#, ASP.NET Core Web API
+- Frontend: HTML, CSS, JavaScript, Razor (.cshtml), Bootstrap
+- Veritabanı: SQL Server (Entity Framework Core ile erişim)
+- Geliştirme Araçları: Visual Studio 2022, SQL Server Management Studio
+- Bağımlılıklar: Swashbuckle (Swagger), FluentValidation, Microsoft.EntityFrameworkCore
+
+  # Projenin Yüklenmesi ve Çalıştırılması
+  1. Depoyu Klonlayın:
+     - git clone https://github.com/ibrahimkzilarslan/carRentalAutomation.git
+
+  2. Bağımlılıkları Yükleyin:
+     - Visual Studio'da çözümü açın (RentACar.sln).
+     - NuGet Package Manager ile bağımlılıkları restore edin.
+       
+  3. Veritabanını Kurun:
+     - appsettings.json dosyasında bağlantı dizesini (connection string) güncelleyin.
+     - Terminalde proje klasörüne giderek migration'ları çalıştırın (dotnet ef database update)
+       
+  4.Projeyi Çalıştırın:
+     - Visual Studio'da F5 tuşuna basın veya terminalde "dotnet run" komutunu çalıştırın.
+     - API: https://localhost:port/swagger
+     - Frontend: https://localhost:port
+       
+ ![Anasayfa Görseli](screenshots/arayüzfoto.png)
+
+
 
