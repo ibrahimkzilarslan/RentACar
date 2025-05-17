@@ -23,7 +23,6 @@
        
   3. Veritabanını Kurun:
      - appsettings.json dosyasında bağlantı dizesini (connection string) güncelleyin.
-     - Terminalde proje klasörüne giderek migration'ları çalıştırın:
      - Terminalde proje klasörüne giderek migration'ları çalıştırın (dotnet ef database update)
        
   4.Projeyi Çalıştırın:
