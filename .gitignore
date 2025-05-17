@@ -10,6 +10,10 @@
 *.userosscache
 *.sln.docstates
 
+Frontends/RentACarProject.WebUI/wwwroot/
+
+Infrastructure/RentACar.Persistence/Migrations/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
