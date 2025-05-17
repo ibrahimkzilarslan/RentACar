@@ -25,7 +25,6 @@ namespace RentACar.Persistence.Context
         public DbSet<CarDescription> CarDescriptions { get; set; }
         public DbSet<CarFeatures> CarFeatures { get; set; }
         public DbSet<CarPricing> CarPricings { get; set; }
-        public DbSet<Category> Categories { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Features> Features { get; set; }
         public DbSet<FooterAddress> FooterAddresses { get; set; }
@@ -38,9 +37,9 @@ namespace RentACar.Persistence.Context
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<TagCloud> TagClouds { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        public DbSet<RentCar> RentCars { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<RentCar> RentCars { get; set; }      
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
