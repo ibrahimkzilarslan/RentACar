@@ -16,7 +16,6 @@ using RentACar.Application.Features.CQRS.Handlers.AboutHandlers;
 using RentACar.Application.Features.CQRS.Handlers.BannerHandlers;
 using RentACar.Application.Features.CQRS.Handlers.BrandHandlers;
 using RentACar.Application.Features.CQRS.Handlers.CarHandlers;
-using RentACar.Application.Features.CQRS.Handlers.CategoryHandlers;
 using RentACar.Application.Features.CQRS.Handlers.ContactHandlers;
 using RentACar.Application.Services;
 using RentACar.Application.Interfaces.StatisticsInterfaces;
@@ -84,15 +83,6 @@ builder.Services.AddScoped<GetCarQueryHandler>();
 builder.Services.AddScoped<GetCarByIdQueryHandler>();
 builder.Services.AddScoped<GetCarWithBrandQueryHandler>();
 builder.Services.AddScoped<GetLast5CarsWithBrandQueryHandler>();
-
-
-// Category Sýnýfý Konfigürasyonu
-builder.Services.AddScoped<UpdateCategoryCommandHandler>();
-builder.Services.AddScoped<RemoveCategoryCommandHandler>();
-builder.Services.AddScoped<CreateCategoryCommandHandler>();
-builder.Services.AddScoped<GetCategoryQueryHandler>();
-builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
-
 
 // Contact Sýnýfý Konfigürasyonu
 builder.Services.AddScoped<UpdateContactCommandHandler>();
