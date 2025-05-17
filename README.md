@@ -9,9 +9,8 @@ This project is a scalable and sustainable web application developed using **ASP
 - **CQRS (Command and Query Responsibility Segregation)** : It provides a more scalable structure by separating data reading and writing operations.
 - **MediatR (Mediator Pattern)** : A behavioral design pattern that enables loose coupling between layers and decouples responsibilities.
 - **Repository Pattern** : By abstracting data access, it enables the business layer to operate independently of the data source.
-- **JWT (Json Web Token)** : Secure token-based system for user authentication and authorization.
-- **SignalR** : It provides dynamic user experience by providing true two-way communication (e.g. packages system, live tables, etc.).
 - **Pivot Table** : Dynamic tabular structure that facilitates summarization and analysis of data.
 - **FluentValidation** : It is used to define strong and readable validation rules at the object level.
 - **DTO (Data Transfer Object)** : Simple and secure data models used to move data between layers.
+
 
