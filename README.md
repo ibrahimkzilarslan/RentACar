@@ -29,7 +29,8 @@
      - Visual Studio'da F5 tuşuna basın veya terminalde "dotnet run" komutunu çalıştırın.
      - API: https://localhost:port/swagger
      - Frontend: https://localhost:port
- 
+       
+ ![Anasayfa Görseli](screenshots/arayuzfoto.png)
 
 
 
